@@ -82,3 +82,27 @@ markCalculate();
 
 "sorry ali you scored 33 and you have failed"
 "conrg omar you scored 88 and you have passed"
+
+
+
+function checkStudentResults(names, marks, passMark) {
+  // Iterate over the arrays
+  for (var i = 0; i < names.length; i++) {
+    var name = names[i];
+    var mark = marks[i];
+
+    // Check if the mark is greater than or equal to the pass mark
+    if (mark >= passMark) {
+      console.log("Congrats " + name + ", you scored " + mark + " and you have passed");
+    } else {
+      console.log("Sorry " + name + ", you scored " + mark + " and you have failed");
+    }
+  }
+}
+
+// Example usage
+var studentNames =["ahmad", "ali", "anas", "omar","rana","nada"];
+var studentMarks = [60, 48, 33, 88,50,49];
+var passMark = 50;
+
+checkStudentResults(studentNames, studentMarks, passMark);
